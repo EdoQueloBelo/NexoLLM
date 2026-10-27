@@ -1,0 +1,33 @@
+NexoLLM
+Copyright (c) 2026 EdevS. All rights reserved.
+
+This software and its source code are proprietary. They are not open source.
+
+You may download the official builds of NexoLLM published by EdevS and use them
+free of charge, for personal or professional purposes, on computers you own or
+control.
+
+Without prior written permission from EdevS you may not:
+
+  1. copy, publish, share or redistribute the software or any part of it,
+     including through mirrors, bundles, installers or app stores;
+  2. modify, adapt, translate or create derivative works based on it;
+  3. decompile, disassemble or reverse engineer it, except where applicable
+     law expressly allows this despite this limitation;
+  4. remove or alter this notice, the name NexoLLM or any attribution to EdevS;
+  5. sell, rent, lease or sublicense it.
+
+The names "NexoLLM" and "EdevS" and the NexoLLM icon may not be used to
+identify other products without permission.
+
+Third-party components keep their own licenses. In particular NexoLLM bundles
+llama.cpp (MIT License, Copyright (c) 2023-2026 The ggml authors). Language
+models are downloaded separately and are governed by their own terms.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS
+FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHOR BE
+LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY ARISING FROM, OUT OF OR IN
+CONNECTION WITH THE SOFTWARE OR ITS USE.
+
+Questions about licensing: open an issue at https://github.com/NexoLLM/NexoLLM
