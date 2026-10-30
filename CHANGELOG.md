@@ -4,6 +4,34 @@ Every release of NexoLLM, newest first. Versions follow [Semantic Versioning](ht
 NexoLLM is in beta: until 1.0 a minor version (0.x.0) can change behavior, a patch (0.x.y) only fixes things.
 The build number in parentheses grows with every commit.
 
+## [0.3.0] - 2026-10-30
+
+### Better suggestions
+Suggestions now start from the half-typed word instead of after it. Before, the model could only add
+letters to what you had typed, so the obvious word was often out of reach and a rare, longer one came up
+instead. The word you're typing also keeps its capitalization.
+
+Spelling corrections follow the language of the sentence, use the sentence for context and only fix near
+misses: one or two letters off, swapped letters or a missing accent. Names, acronyms and words you use
+often are never corrected. Suggestions are no longer held back while a word is only half typed.
+
+### Alternatives
+⌥Tab lists other words for the one you're typing, or for the next one, at any point. Press it again to
+switch to other ways of finishing the sentence. With a word selected it lists synonyms.
+
+### Models
+NexoLLM detects your Mac's chip and memory and recommends a model for when you're plugged in and one for
+battery. Models can be downloaded from Settings (verified with SHA-256), imported from a GGUF file or
+deleted to free the space. Bring your own key for OpenAI, Anthropic, Google Gemini or any
+OpenAI-compatible service to use a cloud model instead; keys are stored in the Keychain.
+
+### Interface
+The floating button is gone. The menu bar icon shows the status, ⌃⌥M opens the menu at the cursor and a
+short note confirms when you pause or resume. Setting descriptions moved into an ⓘ popover, texts are
+shorter, and the app is English throughout, numbers and dates included. Light and dark appearance can
+be chosen in Behavior. The About page has links to GitHub, bug reports and release notes. Saved texts
+can be browsed, searched and deleted one by one, with their real size on disk.
+
 ## [0.2.0] - 2026-10-27
 
 The first release under the NexoLLM name.

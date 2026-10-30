@@ -6,7 +6,7 @@ seriously and answered first.
 ## Reporting a vulnerability
 
 Please don't open a public issue. Use GitHub's private reporting instead:
-**Security → Report a vulnerability** on https://github.com/NexoLLM/NexoLLM/security/advisories/new
+**Security → Report a vulnerability** on https://github.com/EdoQueloBelo/NexoLLM/security/advisories/new
 
 Include the NexoLLM version (Settings → About), your macOS version and the steps to reproduce.
 You'll get an answer within a few days.
@@ -25,6 +25,7 @@ shasum -a 256 NexoLLM-*.dmg
 
 ## How the app protects you
 
-The app has no network code, stores your history and memory encrypted (AES-256-GCM, key in the Keychain)
-in an owner-only folder, never reads password fields or secure input, and is signed with the hardened
-runtime, which blocks code injection.
+In local mode the app makes no network connections. Downloaded models are verified against their SHA-256,
+cloud API keys live in the Keychain and travel only over HTTPS to their provider. History and memory are
+encrypted (AES-256-GCM, key in the Keychain) in an owner-only folder, password fields and secure input are
+never read, and the app is signed with the hardened runtime, which blocks code injection.

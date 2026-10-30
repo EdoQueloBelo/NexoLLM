@@ -5,8 +5,17 @@ keeps and where.
 
 ## Network
 
-None. NexoLLM opens no network connections: no analytics, no crash reporting, no update checks, no account.
-The language model runs on your Mac's GPU.
+With a local model, NexoLLM makes no network connections while you write: no analytics, no crash
+reporting, no update checks, no account. The model runs on your Mac's GPU.
+
+Two things use the network, and only when you ask for them:
+
+| When | What is sent | To |
+|---|---|---|
+| You download a model in Settings | A standard file download request | Hugging Face |
+| You choose Cloud API and save a key | The text around the cursor, nearby fields and, if enabled, screen text, while you type | The provider you picked (OpenAI, Anthropic, Google or the URL you entered) |
+
+API keys are stored in your Keychain and sent only to their provider, over HTTPS.
 
 ## What it reads
 
@@ -40,4 +49,4 @@ include short text fragments, is off unless you turn it on in Settings. The file
 
 ## Questions
 
-Open an issue at https://github.com/NexoLLM/NexoLLM/issues
+Open an issue at https://github.com/EdoQueloBelo/NexoLLM/issues

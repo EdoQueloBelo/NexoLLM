@@ -1,137 +1,147 @@
 <div align="center">
 
-<img src="assets/icon.png" width="112" alt="NexoLLM icon">
+<img src="assets/icon.png" width="104" alt="NexoLLM">
 
 # NexoLLM
 
-**Your Mac finishes your sentences. Nothing leaves it.**
-
-<p>
-  <img src="https://img.shields.io/badge/macOS-14%2B-111111?style=flat-square&logo=apple&logoColor=white" alt="macOS 14+">
-  <img src="https://img.shields.io/badge/Apple%20Silicon-native-5A6BF2?style=flat-square" alt="Apple Silicon">
-  <img src="https://img.shields.io/badge/runs-100%25%20offline-2FB37F?style=flat-square" alt="Offline">
-  <img src="https://img.shields.io/github/v/release/NexoLLM/NexoLLM?include_prereleases&style=flat-square&label=beta&color=F29E33" alt="Latest beta">
-  <img src="https://img.shields.io/github/downloads/NexoLLM/NexoLLM/total?style=flat-square&color=5A6BF2" alt="Downloads">
-</p>
-
-[Download](https://github.com/NexoLLM/NexoLLM/releases/latest) · [Changelog](CHANGELOG.md) · [Privacy](PRIVACY.md) · [Report a bug](https://github.com/NexoLLM/NexoLLM/issues/new/choose)
-
-English | [Italiano](README-IT.md)
+Autocomplete for every app on your Mac.<br>
+Runs a local model on Apple Silicon, or the API you already pay for.
 
 <br>
 
-<img src="assets/overview.png" width="820" alt="NexoLLM settings window">
+<a href="https://github.com/EdoQueloBelo/NexoLLM/releases/latest/download/NexoLLM.dmg"><img src="https://img.shields.io/badge/Download_for_macOS-5A6BF2?style=for-the-badge&logo=apple&logoColor=white" alt="Download for macOS" height="36"></a>
+
+<br><br>
+
+<img src="https://img.shields.io/github/v/release/EdoQueloBelo/NexoLLM?style=flat-square&label=version&color=5A6BF2" alt="Latest version">
+<img src="https://img.shields.io/badge/macOS-14%2B-1f2328?style=flat-square" alt="macOS 14 or later">
+<img src="https://img.shields.io/badge/Apple_Silicon-native-1f2328?style=flat-square" alt="Apple Silicon">
+<img src="https://img.shields.io/badge/status-beta-F29E33?style=flat-square" alt="Beta">
+
+<br><br>
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/hero-dark.png">
+  <img src="assets/hero-light.png" width="860" alt="A suggestion in grey after the cursor in a mail draft">
+</picture>
 
 </div>
 
-<br>
+## What it does
 
-## What it is
+NexoLLM sits in the menu bar and suggests the rest of your sentence, in grey, right after the cursor.
+<kbd>Tab</kbd> takes the next word, the key above it takes the whole suggestion, and if you keep typing
+it simply goes away. It works wherever you write: Mail, Messages, Slack, Notes, Pages, Safari, Chrome,
+Obsidian and most other apps.
 
-NexoLLM is a writing engine that lives in your menu bar. While you type in Mail, Messages, WhatsApp, Notes,
-Pages, Safari, Slack or Obsidian, it suggests how the sentence goes on, in grey, right after the cursor.
-Press `Tab` to take the next word, keep typing to ignore it.
-
-The language model runs on the Apple Silicon GPU of your Mac. There is no account, no subscription and no
-server: your text, your history and whatever the app learns about you stay on your disk, encrypted.
-
-It pays attention to the moment. Write "dal 19 al 23" in the subject of an email and start the same phrase
-in the body: NexoLLM completes it with 23, because it read the subject, not because it guessed.
+It reads more than the line you're on. Names, dates and numbers in the subject or the recipient field
+carry over into the body. Your past writing teaches it your tone, per app, and a short encrypted memory
+keeps track of what you've been writing about lately.
 
 <br>
-
-## How it works
-
-Every suggestion goes through the same four steps, in a few tenths of a second.
 
 <table>
-  <tr>
-    <td width="70" align="center"><b>01</b></td>
-    <td><b>Reading the moment</b><br>The text around the cursor and the short fields next to it (subject,
-    recipients, the title of a note), read through macOS Accessibility. If you want, also the window
-    itself: by pressing <code>⌃⌥S</code>, or automatically only when it helps. Screens are turned into text on
-    device and never saved.</td>
-  </tr>
-  <tr>
-    <td align="center"><b>02</b></td>
-    <td><b>Remembering you</b><br>How you write in each app (formal in Mail, short in chats), the expressions
-    you use, how you open and close a message, and a small memory of the topics of the last few days that
-    fades by itself.</td>
-  </tr>
-  <tr>
-    <td align="center"><b>03</b></td>
-    <td><b>Thinking on device</b><br>Gemma 4 (E4B, or E2B on battery) through llama.cpp on Metal. The prompt
-    cache is reused while you type, numbers and names from the context are copied exactly, and when the
-    model isn't sure it simply says less.</td>
-  </tr>
-  <tr>
-    <td align="center"><b>04</b></td>
-    <td><b>Writing only what you accept</b><br>One <code>Tab</code> per word. Punctuation needs its own press, so a
-    comma you didn't want never lands in your text. The grey adapts to the page under the cursor, so it
-    stays readable on white web pages in dark mode.</td>
-  </tr>
+<tr>
+<td width="50%" valign="top">
+
+**Words that make sense**<br>
+Suggestions start from the half-typed word, so the obvious word is the one you get. Punctuation always
+takes its own <kbd>Tab</kbd>, so you decide where a sentence ends.
+
+</td>
+<td width="50%" valign="top">
+
+**Other options, one key away**<br>
+<kbd>⌥</kbd> <kbd>Tab</kbd> lists other words for the one you're typing. Press it again to see other ways
+to finish the sentence. Select a word to get synonyms.
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+**Local or cloud**<br>
+Pick a model for your Mac and download it from Settings, or paste an OpenAI, Anthropic, Gemini or
+OpenRouter key and use that instead.
+
+</td>
+<td valign="top">
+
+**Out of the way**<br>
+No floating buttons. The menu bar icon shows the status, and <kbd>⌃</kbd> <kbd>⌥</kbd> <kbd>M</kbd> opens
+the menu right at the cursor.
+
+</td>
+</tr>
 </table>
 
 <br>
 
-## See it
-
-<div align="center">
-<img src="assets/overlays.png" width="560" alt="Suggestion, correction, emoji and alternatives">
-</div>
-
-<br>
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/alternatives-dark.png">
+  <img src="assets/alternatives-light.png" width="860" alt="Word alternatives listed under the cursor">
+</picture>
 
 ## Install
 
-| | |
-|---|---|
-| **1. Download** | Get `NexoLLM-<version>.dmg` from [Releases](https://github.com/NexoLLM/NexoLLM/releases/latest) and drag the app to Applications. |
-| **2. First launch** | The beta isn't notarized yet. Right click the app, choose Open, then confirm. You only do this once. |
-| **3. Permissions** | Accessibility is required to read and insert text. Screen Recording is optional and only used for screen context. |
-| **4. Model** | Put a Gemma 4 GGUF model (E4B or E2B, Q4_K_M) in `~/Library/Application Support/NexoLLM/Models`. The Overview page tells you if something is missing. |
+1. Download [NexoLLM.dmg](https://github.com/EdoQueloBelo/NexoLLM/releases/latest/download/NexoLLM.dmg) and drag NexoLLM to Applications.
+2. The beta isn't notarized yet. The first time, right-click the app and choose **Open**.
+3. Allow **Accessibility** when asked. Screen Recording is optional.
+4. Open **Settings → Engine → Models** and click **Use Recommended**. NexoLLM picks models that fit your Mac's memory and downloads them.
 
-Requirements: macOS 14 or later on Apple Silicon, 8 GB of memory (16 GB recommended for E4B).
-
-<br>
+Requires macOS 14 or later on Apple Silicon. 8 GB of memory works, 16 GB is recommended.
 
 ## Keys
 
-| Action | Key |
+| | |
 |---|---|
-| Take the next word (punctuation is its own press) | `Tab` |
-| Take the whole suggestion | the key above `Tab` |
-| Dismiss | `Esc` |
-| Ask for a suggestion now | `⌃` + the key above `Tab` |
-| Read the screen now | `⌃⌥S` |
-| Alternatives, or synonyms of the selected word | `⌥Tab` |
-| Pause in the current app | `⌃⌥⌘` + the key above `Tab` |
+| Accept the next word | <kbd>Tab</kbd> |
+| Accept the whole suggestion | the key above <kbd>Tab</kbd> |
+| Dismiss | <kbd>Esc</kbd> |
+| Alternatives (press again to switch word / phrase) | <kbd>⌥</kbd> <kbd>Tab</kbd> |
+| Open the menu at the cursor | <kbd>⌃</kbd> <kbd>⌥</kbd> <kbd>M</kbd> |
+| Read the screen for context | <kbd>⌃</kbd> <kbd>⌥</kbd> <kbd>S</kbd> |
+| Suggest now | <kbd>⌃</kbd> + the key above <kbd>Tab</kbd> |
 
-Everything can be changed in Settings, under Input.
+All of them can be changed in Settings → Input.
 
-<br>
+## Models
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/settings-models-dark.png">
+  <img src="assets/settings-models-light.png" width="860" alt="Models settings">
+</picture>
+
+NexoLLM checks your chip and memory and recommends a model for when you're plugged in and a lighter one
+for battery. Downloads come straight from Hugging Face and are verified with SHA-256 before they're used.
+You can also import any GGUF file, and delete models you don't need to get the space back.
+
+| Model | Size | Good for |
+|---|---|---|
+| Gemma 4 E4B | 5.3 GB | Best quality, 16 GB Macs |
+| Gemma 4 E2B | 3.4 GB | Fast, battery, 8 GB Macs |
+| Llama 3.2 3B | 2.0 GB | Smallest, English |
+
+With a cloud key, suggestions come from the provider you choose. Keys stay in your Keychain.
 
 ## Privacy
 
-NexoLLM makes no network connections. The typing history and the memory are encrypted with AES-256-GCM
-using a key kept in your Keychain, inside a folder only your user can read. Password fields and secure
-input are never read. The details are in [PRIVACY.md](PRIVACY.md).
+With a local model nothing leaves your Mac: no account, no analytics, no network. Your writing history and
+memory are encrypted with a key kept in the Keychain, and password fields are never read. In cloud mode
+the text around the cursor goes to the provider you picked, and only to them. Details in
+[PRIVACY.md](PRIVACY.md).
 
-<br>
+## Feedback
 
-## Status
-
-NexoLLM is a beta and still far from 1.0. Things will change between versions, and your bug reports
-shape what comes next: tell me what you were typing and in which app, and I'll look at it.
-
-<br>
+NexoLLM is in beta. If a suggestion is wrong or something breaks, [open an issue](https://github.com/EdoQueloBelo/NexoLLM/issues/new/choose)
+and say which app you were in. Release notes are in the [changelog](CHANGELOG.md).
 
 ## License
 
-NexoLLM is free to use and proprietary. The source code isn't published and the app may not be
-redistributed or modified. See [LICENSE](LICENSE). It includes llama.cpp, released under the MIT license.
+Free to use. NexoLLM is proprietary software: the source code is not published, and redistributing or
+modifying the app isn't allowed. See [LICENSE](LICENSE). It includes llama.cpp (MIT).
 
 <div align="center">
 <br>
-Made by <b>EdevS</b>
+<sub>Made by EdevS</sub>
 </div>
